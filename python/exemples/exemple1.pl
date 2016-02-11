@@ -22,8 +22,10 @@ dico_bad = { "success": False , "errormessages" : "création d'une exception", "
 
 try:
 	import sys
-	sys.sdtout = None
+	import StringIO
+	sys.stdout = StringIO()
 	import student
+	dico_good["execution"]= str(StringIO())
 	print(json.dumps(dico_good))
 except:
     print(json.dumps(dico_bad))
