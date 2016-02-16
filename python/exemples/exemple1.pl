@@ -11,23 +11,5 @@ code==
 # Veuillez saisir votre code ici
 
 ==
-grader==
-import sys
-import json 
-
-
-dico_good = { "success": True , "errormessages" : "" , "execution": "OK", "feedback": "ok", "other": "" }
-dico_bad = { "success": False , "errormessages" : "création d'une exception", "execution": "", "feedback": "modifier votre valeur", "other": "" }
-
-
-try:
-	import sys
-	import StringIO
-	sys.stdout = StringIO()
-	import student
-	dico_good["execution"]= str(StringIO())
-	print(json.dumps(dico_good))
-except:
-    print(json.dumps(dico_bad))
-==
+grader=@mongarder.py
 
