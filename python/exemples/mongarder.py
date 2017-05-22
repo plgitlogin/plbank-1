@@ -19,3 +19,7 @@ try:
 except Exception as e:
 	print(e)
 	print(json.dumps(dico_bad))
+
+	
+	
+	
